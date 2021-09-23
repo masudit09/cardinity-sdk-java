@@ -125,7 +125,7 @@ public class CardinityIntegrationTest extends CardinityBaseTest {
     @Test
     public void testCreateApprovedPaymentWithDescriptorSuffix() {
         Payment payment = getBaseCCPayment();
-        payment.setStatementDescriptorSuffix("25 ");
+        payment.setStatementDescriptorSuffix("Suffix");
         Result<Payment> initialResult = client.createPayment(payment);
         assertTrue(initialResult.isValid());
         Payment resultPayment = initialResult.getItem();

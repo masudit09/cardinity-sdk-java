@@ -106,7 +106,7 @@ public class PaymentValidatorTest {
     }
     @Test
     public void testValidateRightStatementDescriptorSuffix() throws Exception {
-        payment.setStatementDescriptorSuffix("25 chars Suffix provided.");
+        payment.setStatementDescriptorSuffix("Suffix");
         paymentValidator.validate(payment);
     }
 

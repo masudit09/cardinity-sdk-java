@@ -57,8 +57,8 @@ public class PaymentValidator implements Validator<Payment> {
         }
 
         if (payment.getStatementDescriptorSuffix() != null &&
-                !ValidationUtils.validateIntervalLength(payment.getStatementDescriptorSuffix(), 0,25))
-            throw new ValidationException("Statement descriptor suffix maximum length 25 characters.");
+                !ValidationUtils.validateIntervalLength(payment.getStatementDescriptorSuffix(), 0,6))
+            throw new ValidationException("Statement descriptor suffix maximum length 6 characters.");
     }
 
     private void validateCard(Card card) {
